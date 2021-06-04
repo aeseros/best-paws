@@ -1,0 +1,26 @@
+{
+  "name": "best-paws",
+  "version": "1.0.0",
+  "description": "discover dog & cat breeds through an online community!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-ukp/best-paws.git"
+  },
+  "keywords": [
+    "express.js",
+    "handlebars.js",
+    "mysql2",
+    "bcrypt"
+  ],
+  "author": "Anna Uyen Phung, Carlos Barrientos, Cesar De La Portilla, Mohammed Ottun, Paul Turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-ukp/best-paws/issues"
+  },
+  "homepage": "https://github.com/a-ukp/best-paws#readme"
+}
