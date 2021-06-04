@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/a-ukp/best-paws/issues"
   },
-  "homepage": "https://github.com/a-ukp/best-paws#readme"
+  "homepage": "https://github.com/a-ukp/best-paws#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
