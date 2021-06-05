@@ -7,8 +7,9 @@ Discover breeds of dogs and cats, join our community forums, share stories of yo
 * To view and post to our community forums, create a free account!
 
 ## Link
+https://bestpaws.herokuapp.com/
 
-### Preview
+#### Preview
 
 ## Future Ideas
 
