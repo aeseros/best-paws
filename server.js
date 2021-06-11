@@ -9,8 +9,9 @@ const Models = require('./models/index.js');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+const hbs = exphbs.create();
 
-app.engine('handlebars', exphbs());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
