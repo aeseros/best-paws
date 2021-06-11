@@ -12,11 +12,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/gallery', async (req, res) => {
+// Accounts route
+router.get('/account', async (req, res) => {
   try {
     // do something
-    console.log(`gallery route accessed ...`);
-    res.render('gallery');
+    console.log(`account route accessed ...`);
+    res.render('account');
 
   } catch (err) {
     console.log(err);
@@ -24,6 +25,20 @@ router.get('/gallery', async (req, res) => {
   }
 });
 
+// Forum route
+router.get('/forum', async (req, res) => {
+  try {
+    // do something
+    console.log(`forum route accessed ...`);
+    res.render('forum');
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Contact route
 router.get('/contact', async (req, res) => {
   try {
     // do something
@@ -36,11 +51,28 @@ router.get('/contact', async (req, res) => {
   }
 });
 
-router.get('/forum', async (req, res) => {
+// Logim route
+router.get('/login', async (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      res.redirect('/account');
+      return;
+    }
+
+    res.render('login');
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Signup route
+router.get('/signup', async (req, res) => {
   try {
     // do something
-    console.log(`forum route accessed ...`);
-    res.render('forum');
+    console.log(`signup route accessed ...`);
+    res.render('signup');
 
   } catch (err) {
     console.log(err);
