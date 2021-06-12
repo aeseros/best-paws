@@ -51,7 +51,7 @@ router.get('/contact', async (req, res) => {
   }
 });
 
-// Logim route
+// Login route
 router.get('/login', async (req, res) => {
   try {
     if (req.session.logged_in) {
