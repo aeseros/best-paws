@@ -28,10 +28,10 @@ router.get('/account', async (req, res) => {
 // Forum route
 router.get('/forum', async (req, res) => {
   try {
-    // do something
-    console.log(`forum route accessed ...`);
-    res.render('forum');
-
+    const topics = await Topic.findAll();
+    console.log(topics);
+    res.render("forum", { topics: topics, layout: "forum" });
+    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
