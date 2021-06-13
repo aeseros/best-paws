@@ -8,8 +8,6 @@ const userRoutes = require('./userRoutes');
 
 // localhost/api/users
 router.use('/users', userRoutes);
-
-
 // router.use('/forum', forumRoutes);
 // router.use('/topic', topicRoutes);
 // router.use('/posts', postsRoutes);
