@@ -1,3 +1,4 @@
+// delete this later. make sure it doesn't cause any problems
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
