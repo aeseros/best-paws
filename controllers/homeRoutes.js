@@ -14,26 +14,33 @@ router.get('/', async (req, res) => {
   }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Accounts route
 router.get('/account', withAuth, async (req, res) => {
   try {
 
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Pet, Post, Comment }]
-    });
+    // const userData = await User.findByPk(req.session.user_id, {
+    //   attributes: { exclude: ['password'] },
+    //   include: [{ model: Post, Comment }]
+    // });
 
-    const user = userData.get({ plain: true });
+    // const user = userData.get({ plain: true });
 
-    res.render('account', {
-      ...user,
-      logged_in: true
-    });
+    // res.render('account', {
+    //   ...user,
+    //   logged_in: true
+    // });
+
+    res.render('account');
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Forum route
 router.get('/forum', async (req, res) => {
@@ -48,6 +55,8 @@ router.get('/forum', async (req, res) => {
   }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Contact route
 router.get('/contact', async (req, res) => {
   try {
@@ -61,31 +70,24 @@ router.get('/contact', async (req, res) => {
   }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Login route
 router.get('/login', async (req, res) => {
-  try {
     if (req.session.logged_in) {
       res.redirect('/account');
       return;
     }
-
     res.render('login');
 
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
 });
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Signup route
 router.get('/signup', async (req, res) => {
   try {
 
-    // Create new user 
-
-    // Store user data in db
-
-    //
+    res.render('signup');
 
   } catch (err) {
     console.log(err);
