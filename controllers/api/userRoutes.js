@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
     console.log(' login from userRoutes');
     try {
-        const userData = await userData.findOne({ where: { email: req.body.email } });
+        const userData = await User.findOne({ where: { email: req.body.email } });
 
         if (!userData) {
             res
@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const validPawword = await userData.checkPassword(req.body.password);
+        const validPawword = await User.checkPassword(req.body.password);
 
         if (!validPawword) {
             res
@@ -47,6 +47,7 @@ router.post('/login', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
+            res.status(200);
             res.json({ user: userData, message: 'You are logged in!' });
         });
     } catch (err) {

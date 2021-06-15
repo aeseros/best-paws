@@ -1,12 +1,21 @@
 # Best Paws 🐾
 
-## Table of Contents 
-* [Description](#Description)
-* [Usage](#Usage)
-* [Future Ideas](#FutureIdeas)
-* [Contributors](#contributors)
-* [Credits](#Credits)
-* [Issues](#Issues)
+## Table of Contents
+- [Best Paws 🐾](#best-paws-)
+  - [Table of Contents](#table-of-contents)
+  - [Description 🖥️](#description-️)
+    - [User Story](#user-story)
+    - [Acceptance Criteria](#acceptance-criteria)
+  - [Usage](#usage)
+    - [Link](#link)
+      - [Preview](#preview)
+  - [!Site Preview](#)
+  - [Future Ideas](#future-ideas)
+  - [Contributors 🐶🐱🐰](#contributors-)
+    - [Back-end](#back-end)
+    - [Front-end](#front-end)
+  - [Credits](#credits)
+  - [Issues](#issues)
 
 ---
 
@@ -62,12 +71,14 @@ THEN they can view others' name and pet information.
 https://bestpaws.herokuapp.com/
 
 #### Preview
-
-
-
+![Site Preview](./public/images/preview.png)
 ---
 
 ## Future Ideas
+* Park locator - Match pet owner based on their geograhical location 
+* Breed match - Match like-minded pet owners that have pet breeds in common
+* Loadbalancing site traffic
+
 
 ---
 
@@ -91,3 +102,8 @@ https://bestpaws.herokuapp.com/
 ---
 
 ## Issues
+* Login - Users are unable to login successfully
+* Route guards for logged in users
+* Dynamically linking post to comments
+* Dynamically linking posts to topics in the forum
+  
