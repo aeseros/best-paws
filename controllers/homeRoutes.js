@@ -95,4 +95,12 @@ router.get('/signup', async (req, res) => {
   }
 });
 
+// router.get('/logout', async (req, res) => {
+//   try {
+//     res.redirect('home');
+//   } catch (error) {
+//     console.log(error);
+//   }
+// })
+
 module.exports = router;
