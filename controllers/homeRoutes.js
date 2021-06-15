@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
+const { User, Pet, Post, Comment } = require('../models')
 
 // Get homepage
 router.get('/', async (req, res) => {
@@ -12,11 +14,24 @@ router.get('/', async (req, res) => {
   }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Accounts route
-router.get('/account', async (req, res) => {
+router.get('/account', withAuth, async (req, res) => {
   try {
-    // do something
-    console.log(`account route accessed ...`);
+
+    // const userData = await User.findByPk(req.session.user_id, {
+    //   attributes: { exclude: ['password'] },
+    //   include: [{ model: Post, Comment }]
+    // });
+
+    // const user = userData.get({ plain: true });
+
+    // res.render('account', {
+    //   ...user,
+    //   logged_in: true
+    // });
+
     res.render('account');
 
   } catch (err) {
@@ -25,18 +40,22 @@ router.get('/account', async (req, res) => {
   }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Forum route
 router.get('/forum', async (req, res) => {
   try {
     const topics = await Topic.findAll();
     console.log(topics);
     res.render("forum", { topics: topics, layout: "forum" });
-    
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Contact route
 router.get('/contact', async (req, res) => {
@@ -51,27 +70,23 @@ router.get('/contact', async (req, res) => {
   }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Login route
 router.get('/login', async (req, res) => {
-  try {
     if (req.session.logged_in) {
       res.redirect('/account');
       return;
     }
-
     res.render('login');
 
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
 });
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Signup route
 router.get('/signup', async (req, res) => {
   try {
-    // do something
-    console.log(`signup route accessed ...`);
+
     res.render('signup');
 
   } catch (err) {
