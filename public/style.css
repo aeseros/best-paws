@@ -12,10 +12,6 @@ h1, h2, h3, p {
     font-family: "brandon-grotesque", sans-serif;
 }
 
-h1 {
-    font-family: "brandon-grotesque", sans-serif;
-}
-
 h2 {
     line-height: 1.3;
     font-weight: 600;
@@ -33,7 +29,7 @@ p {
 
 /* Header */
 header {
-    padding-top: 18em;
+    padding-top: 10em;
     height: 100vh;
     text-align: center;
 }
@@ -72,8 +68,10 @@ section {
     display: block;
     box-sizing: border-box;
     /* height: 100vh; */
+}
+
+main {
     padding-bottom: 65px;
-    align-content: center;
 }
 
 /* Footer */
