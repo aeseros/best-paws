@@ -17,7 +17,7 @@ Topic.init(
     topic_name: {
         type: DataTypes.STRING,
         allowNull: false,
-    }, // do we want to restrict topic names in front end
+    },
   },
   {
     sequelize,
