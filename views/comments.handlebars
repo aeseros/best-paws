@@ -1,12 +1,8 @@
 <div>
-    <h1>Hi</h1>
- 
-        {{#each comments}}
-       <ul>
-           <li>{{{comments.title}}}</li>
-           <li>{{{comments.message}}}</li>
-       </ul>
-       {{/each}}
-   
-
+    {{#each comments}}
+    <ul>
+        <li>{{{comments.title}}}</li>
+        <li>{{{comments.message}}}</li>
+    </ul>
+    {{/each}}
 </div>
