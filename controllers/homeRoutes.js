@@ -45,13 +45,14 @@ router.get('/account', withAuth, async (req, res) => {
 // Forum route
 router.get('/forum', async (req, res) => {
   try {
-    const topics = await Topic.findAll();
-    console.log(topics);
-    res.render("forum", { topics: topics, layout: "forum" });
+    // comment out for now because topics is not defined yet
+    // const topics = await Topic.findAll();
+    // console.log(topics);
+    res.render('forum');
 
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).json('can you see this');
   }
 });
 
@@ -88,6 +89,20 @@ router.get('/signup', async (req, res) => {
   try {
 
     res.render('signup');
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+// terms and conditions
+router.get('/terms', async (req, res) => {
+  try {
+    // do something
+    console.log(`terms route accessed ...`);
+    res.render('terms');
 
   } catch (err) {
     console.log(err);

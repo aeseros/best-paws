@@ -1,5 +1,5 @@
 const User = require('./User');
-// const Topic = require('./Topic');
+const Topic = require('./Topic');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
@@ -11,9 +11,9 @@ Post.belongsTo(User,{
     onDelete: 'CASCADE',
 });
 
-// Post.belongsTo(Topic,{
-//     foreignKey: 'topicId',
-// });
+Post.belongsTo(Topic,{
+    foreignKey: 'topicId',
+});
 
 Post.hasMany(Comment,{
     foreignKey: 'postId',
@@ -25,9 +25,9 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE',
 });
 
-// Topic.hasMany(Post,{
-//     foreignKey: 'topicId',
-//     onDelete: 'CASCADE', // always stays the same, dropdown menu to create post from
-// });
+Topic.hasMany(Post,{
+    foreignKey: 'topicId',
+    onDelete: 'CASCADE', // always stays the same, dropdown menu to create post from
+});
 
 module.exports = {User, Post, Comment}
