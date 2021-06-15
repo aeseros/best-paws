@@ -68,6 +68,7 @@ section {
     display: block;
     box-sizing: border-box;
     /* height: 100vh; */
+    padding-top: 25px;
 }
 
 main {
