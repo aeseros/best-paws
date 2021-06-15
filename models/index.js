@@ -30,6 +30,4 @@ Topic.hasMany(Post,{
     onDelete: 'CASCADE', // always stays the same, dropdown menu to create post from
 });
 
-
-
-module.exports = {User, Topic, Post, Comment}
+module.exports = {User, Post, Comment}
