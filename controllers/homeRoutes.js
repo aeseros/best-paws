@@ -47,7 +47,7 @@ router.get('/forum', async (req, res) => {
   try {
     const topics = await Topic.findAll();
     console.log(topics);
-    res.render("forum", { topics: topics, layout: "forum" });
+    res.render('forum');
 
   } catch (err) {
     console.log(err);
