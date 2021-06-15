@@ -1,6 +1,6 @@
-# Best Paws
+# Best Paws 🐾
 
-## Table of Contents
+## Table of Contents 
 * [Description](#Description)
 * [Usage](#Usage)
 * [Future Ideas](#FutureIdeas)
@@ -10,7 +10,7 @@
 
 ---
 
-## Description
+## Description 🖥️
 Discover breeds of dogs and cats, join our community forums, share stories of your best-paw-friends!
 
 ### User Story
@@ -63,17 +63,30 @@ https://bestpaws.herokuapp.com/
 
 #### Preview
 
+
+
 ---
 
 ## Future Ideas
 
 ---
 
-## Contributors
+## Contributors 🐶🐱🐰
+### Back-end
+* [Anna Phung](https://github.com/a-ukp)
+* [Mohammed Ottun](https://github.com/MohammedOttun)
+* [Cesar De La Portilla](https://github.com/DLP713)
+
+### Front-end
+* [Carlos Barrientos](https://github.com/WitnessMyHands)
+* [Paul Turner](https://github.com/Pgturn68)
 
 ---
 
 ## Credits
+* [Express](https://www.npmjs.com/package/express)
+* [Sequelize](https://www.npmjs.com/package/sequelize)
+* [Connect Session Sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 
 ---
 
