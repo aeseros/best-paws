@@ -25,5 +25,6 @@ const loginFormHandler = async (event) => {
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
-  
+    .addEventListener('submit', loginFormHandler)
+    // works when you release any key for "enter"
+    .addEventListener('onkeyup', loginFormHandler);

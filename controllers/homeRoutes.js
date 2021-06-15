@@ -96,6 +96,7 @@ router.get('/signup', async (req, res) => {
   }
 });
 
+
 // terms and conditions
 router.get('/terms', async (req, res) => {
   try {
@@ -108,6 +109,5 @@ router.get('/terms', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 module.exports = router;
