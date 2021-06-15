@@ -35,10 +35,10 @@ User.init(
         len: [4],
       },
     },
-    pet: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    }
+    // pet: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: true,
+    // }
     // asking for what kind of pet forces a pets table for multiple pets
   },
   {

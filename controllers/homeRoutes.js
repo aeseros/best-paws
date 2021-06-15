@@ -20,19 +20,19 @@ router.get('/', async (req, res) => {
 router.get('/account', withAuth, async (req, res) => {
   try {
 
-    // const userData = await User.findByPk(req.session.user_id, {
-    //   attributes: { exclude: ['password'] },
-    //   include: [{ model: Post, Comment }]
-    // });
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Post, Comment }]
+    });
 
-    // const user = userData.get({ plain: true });
+    const user = userData.get({ plain: true });
 
-    // res.render('account', {
-    //   ...user,
-    //   logged_in: true
-    // });
+    res.render('account', {
+      ...user,
+      logged_in: true
+    });
 
-    res.render('account');
+    // res.render('account');
 
   } catch (err) {
     console.log(err);
