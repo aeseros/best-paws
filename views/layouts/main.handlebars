@@ -39,7 +39,7 @@
                 {{#if loggedIn}}
                     <a class="navbar-item" href="/" id="logout">Logout</a>
                 {{else}}
-                    <a class="navbar-item" href="/login">Login</a>
+                    <a class="navbar-item" href="/login">Login or Signup</a>
                 {{/if}}
             </div>
         </div>
@@ -48,10 +48,6 @@
     <main>
         {{{body}}}
     </main>
-
-    {{#if loggedIn}}
-        <script src="/js/logout.js"></script>
-    {{/if}}
 </body>
 
 <footer class="footer">
@@ -65,6 +61,8 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
 <script src="/public/script.js" type="text/javascript"></script>
+<script src="./js/login.js"></script>
+<script src="./js/signup.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js"></script>
 <script>
