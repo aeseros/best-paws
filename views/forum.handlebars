@@ -1,6 +1,39 @@
-<head>
-    <title>res.render() Demo</title>
-</head>
-<body>
-    <h2>Welcome to GeeksforGeeks</h2>
-</body>
+<section class="section">
+    <div class="container">
+        <h3 class="title has-text-centered is-size-3">Forum</h3>
+        <div class="columns">
+            <div class="column">
+                <p class="has-text-centered">
+                    Please feel free to leave any feedback about your Best Paws experiences in the field below.
+                    Our dedicated team will reach out to you as soon as we can!
+                </p>
+                <br />
+                <form>
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                    <input class="input is-primary" type="text" placeholder="Santa's Little Helper" required />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email Address</label>
+                    <div class="control has-icons-left">
+                    <input class="input is-primary" type="email" placeholder="hello@paws.com" autocomplete="username" required />
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+                <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea class="textarea is-primary" placeholder="Leave us a Message!" required></textarea>
+                    </div>
+                </div>
+                </form>
+                <div class="control">
+                    <a class="button is-primary" href="mailto:admin@paws.com">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

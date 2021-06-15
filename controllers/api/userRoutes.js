@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
     console.log(' login from userRoutes');
     try {
-        const userData = await User.findOne({ where: { email: req.body.email } });
+        const userData = await userData.findOne({ where: { email: req.body.email } });
 
         if (!userData) {
             res
@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const validPawword = await User.checkPassword(req.body.password);
+        const validPawword = await userData.checkPassword(req.body.password);
 
         if (!validPawword) {
             res
@@ -66,6 +66,6 @@ router.post('/logout', (req, res) => {
     } else {
       res.status(404).end();
     }
-  });
+});
 
 module.exports = router;
