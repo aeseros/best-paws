@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar has-shadow is-white" role="navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
+            <a class="navbar-item" href="/">
                 <img src="/images/logo.png" alt="Best Paws Logo" style="max-height: 50px">
             </a>
             <a class="navbar-burger" id="burger" role="button">
@@ -37,7 +37,8 @@
                 <a class="navbar-item" href="/forum">Forum</a>
                 <a class="navbar-item" href="/contact">Contact Us</a>
                 {{#if loggedIn}}
-                    <a class="navbar-item" href="/" id="logout">Logout</a>
+                    <a class="navbar-item" href="/logout" id="logout">Logout</a>
+                    {{!-- <a class="navbar-item" href="/forum">Forum</a> --}}
                 {{else}}
                     <a class="navbar-item" href="/login">Login or Signup</a>
                 {{/if}}
@@ -53,7 +54,10 @@
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
-            <p>&copy; 2021 Best Paws created by:<a href="https://github.com/a-ukp" class="nav-item"> a-ukp</a>,<a href="https://github.com/Pgturn68" class="nav-item"> PGTurn68</a>,<a href="https://github.com/DLP713" class="nav-item"> Cesar D</a>,<a href="https://github.com/MohammedOttun" class="nav-item"> MohammedOttun</a>, and<a href="https://github.com/WitnessMyHands" class="nav-item"> WitnessMyHands</a>.</p>
+            <p>&copy; 2021 Best Paws created by:
+                <a href="https://github.com/a-ukp" class="nav-item"> a-ukp</a>,
+                <a href="https://github.com/Pgturn68" class="nav-item"> PGTurn68</a>,
+                <a href="https://github.com/DLP713" class="nav-item"> Cesar D</a>,<a href="https://github.com/MohammedOttun" class="nav-item"> MohammedOttun</a>, and<a href="https://github.com/WitnessMyHands" class="nav-item"> WitnessMyHands</a>.</p>
         </div>
     </div>
 </footer>
