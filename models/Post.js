@@ -12,8 +12,8 @@ Post.init(
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.STRING
-      // allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     body: {
       type: DataTypes.STRING,
