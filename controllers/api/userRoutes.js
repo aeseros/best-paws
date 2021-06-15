@@ -6,9 +6,6 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const user = await User.create(req.body);
-        console.log('----------------Created User----------------');
-        console.log(user);
-        console.log('----------------Created User----------------');
 
         req.session.save(() => {
             req.session.user_id = user.id;
@@ -29,7 +26,6 @@ router.post('/login', async (req, res) => {
     console.log(' login from userRoutes');
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
-
         if (!userData) {
             res
                 .status(400)
@@ -38,7 +34,6 @@ router.post('/login', async (req, res) => {
         }
 
         const validPawword = await User.checkPassword(req.body.password);
-
         if (!validPawword) {
             res
                 .status(400)
