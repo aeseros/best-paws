@@ -92,6 +92,14 @@ https://bestpaws.herokuapp.com/
 * [Carlos Barrientos](https://github.com/WitnessMyHands)
 * [Paul Turner](https://github.com/Pgturn68)
 
+### Team Table
+| Letter      | Team Member |
+| ----------- | ----------- |
+| A           | Anna      |
+| B   | Mohammed        |
+| C           | Cesar      |
+| D   | Carlos        |
+| E           | Paul      |
 ---
 
 ## Credits
